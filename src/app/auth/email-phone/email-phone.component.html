@@ -1,0 +1,11 @@
+<!-- src/app/auth/email-phone/email-phone.component.html -->
+<div class="email-phone-container">
+    <h2>Enter Email or Phone</h2>
+    <form (ngSubmit)="checkUser()">
+      <div class="form-group">
+        <label for="emailOrPhone">Email or Phone:</label>
+        <input id="emailOrPhone" [(ngModel)]="emailOrPhone" name="emailOrPhone" required>
+      </div>
+      <button type="submit">Continue</button>
+    </form>
+  </div>

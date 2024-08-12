@@ -1,0 +1,31 @@
+<!-- src/app/auth/signup-step2/signup-step2.component.html -->
+<div class="signup-container">
+    <h2>Sign Up - Step 2</h2>
+    <form (ngSubmit)="signupStep2()">
+      <div class="form-group">
+        <label for="organizationName">Organization Name:</label>
+        <input id="organizationName" [(ngModel)]="organizationName" name="organizationName" required>
+      </div>
+      <div class="form-group">
+        <label for="designation">Designation:</label>
+        <select id="designation" [(ngModel)]="designation" name="designation" required>
+          <option value="Developer">Developer</option>
+          <option value="Manager">Manager</option>
+          <option value="Designer">Designer</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="birthDate">Birth Date:</label>
+        <input id="birthDate" [(ngModel)]="birthDate" name="birthDate" type="date" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input id="city" [(ngModel)]="city" name="city" required>
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode:</label>
+        <input id="pincode" [(ngModel)]="pincode" name="pincode" required pattern="\d{6}">
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
